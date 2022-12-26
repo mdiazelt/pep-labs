@@ -2,7 +2,7 @@
  * TODO: switch to deque
  */
 
-import java.util.PriorityQueue;
+import java.util.LinkedList;
 import java.util.Queue;
 
 /**
@@ -30,7 +30,7 @@ public class QueueExercise {
      * Stack behavior.
      */
     public Queue<String> createQueue(){
-        Queue<String> queue = new PriorityQueue<String>();  
+        Queue<String> queue = new LinkedList<String>();  
         return queue;
     }
 
