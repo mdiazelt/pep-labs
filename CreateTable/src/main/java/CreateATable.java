@@ -64,9 +64,6 @@ public class CreateATable {
      */
     public void problem1(){
         String sql = FileUtil.parseSQLFile("problem1.sql");
-
-        String createString = "Create Table song"+ "(tile varchar(100) NOT NULL, " +
-        "artist varchar(100) NOT NULL, ";
          
         try {
             Connection connection = ConnectionUtil.getConnection();
