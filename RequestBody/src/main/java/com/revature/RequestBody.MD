@@ -90,6 +90,7 @@ app.post("/user", ctx -> {
 
     //return the json string in the response body
     ctx.result(jsonStringToBeReturned);
+});
 ```
 
 Youre Done! 
