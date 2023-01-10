@@ -18,23 +18,23 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/problem1", ctx -> {
+        app.post("/Song", ctx -> {
                 //implement logic here
                 //retrieve the json string from the request body
                 String jsonString = ctx.body();
 
                 //utilize jackson to convert the json string to a user object
                 ObjectMapper om = new ObjectMapper();
-                Problem1 problem1 = om.readValue(jsonString, Problem1.class);
+                Song song = om.readValue(jsonString, Song.class);
 
                 //we need to let the request know we will send back json in the body
-                ctx.contentType("application/json"); 
+                ctx.contentType("App/json"); 
 
                 //change the last name
-                problem1.songName();
+                song.songName(jsonString);
             
                //utilize jackson convert back the user object to a json string
-               String jsonStringToBeReturned = ObjectMapper.writeValueAsString(problem1);
+               String jsonStringToBeReturned = ObjectMapper.writeValueAsString(song);
 
                 //return the json string in the response body
                 ctx.result(jsonStringToBeReturned);                  
@@ -48,27 +48,27 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/problem2", ctx -> {
+        app.post("/song", ctx -> {
                 //implement logic here
-
+                
                 //retrieve the json string from the request body
                 String jsonString = ctx.body();
 
                 //utilize jackson to convert the json string to a user object
                 ObjectMapper om = new ObjectMapper();
-                Problem2 problem2 = om.readValue(jsonString, Problem2.class);
+                Song song = om.readValue(jsonString, Song.class);
 
                 //we need to let the request know we will send back json in the body
-                ctx.contentType("application/json"); 
+                ctx.contentType("App/json"); 
 
                 //change the last name
-                problem2.artistName("artistName");
+                Song.artistName("Beatles");
             
                //utilize jackson convert back the user object to a json string
-               String jsonStringToBeReturned = ObjectMapper.writeValueAsString(problem2);
+               String jsonStringToBeReturned = ObjectMapper.writeValueAsString(song);
 
                 //return the json string in the response body
-                ctx.result(jsonStringToBeReturned);        
+                ctx.result(jsonStringToBeReturned);    
             });
 
 
