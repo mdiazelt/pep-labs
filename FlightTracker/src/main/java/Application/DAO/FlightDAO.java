@@ -111,7 +111,7 @@ public class FlightDAO {
         try {
             //Write SQL logic here. When inserting, you only need to define the departure_city and arrival_city
             //values (two columns total!)
-            String sql = "INSERT INTO flight(departure_city, arrival_city) VALUES (?, ?);";//"change me" ;
+            String sql = "INSERT INTO flight(departure_city, arrival_city) VALUES(?, ?)";//"change me" ;
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //write preparedStatement's setString and setInt methods here.
@@ -151,13 +151,13 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "UPDATE flight SET flight_id = ?, departure_city = ?, arrival_city = ?;"; //"change me";
+            String sql = "UPDATE flight SET departure_city = ?, arrival_city = ? WHERE flight_id = ?"; //"change me";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
-            preparedStatement.setInt(1, id);
+            preparedStatement.setString(1, sql);
             preparedStatement.setString(2, sql);
-            preparedStatement.setString(3, sql);
+            preparedStatement.setInt(3, id);
 
             preparedStatement.executeUpdate();
         }catch(SQLException e){
@@ -191,8 +191,8 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
-            preparedStatement.setString(1, sql);
-            preparedStatement.setString(2, sql);
+            preparedStatement.setString(1, departure_city);
+            preparedStatement.setString(2, arrival_city);
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
