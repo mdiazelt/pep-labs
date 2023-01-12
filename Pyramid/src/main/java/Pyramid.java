@@ -28,7 +28,7 @@ public class Pyramid {
      */
     public String returnPyramid(int n){
 
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
 
         for (int i = 0; i < n; i++) {
             if (i != 0) {
@@ -36,6 +36,6 @@ public class Pyramid {
             }
             sb.append(' ');
         }
-        return;
+        return sb.toString();
     }
 }
