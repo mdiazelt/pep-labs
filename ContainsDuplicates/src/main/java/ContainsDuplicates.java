@@ -1,4 +1,5 @@
-
+import java.util.HashSet;
+import java.util.Set;
 
 public class ContainsDuplicates {
     /**
@@ -9,5 +10,9 @@ public class ContainsDuplicates {
      */
     public boolean containsDuplicate(int[] nums){
         return false;
+    }
+
+    private Object nums(int i) {
+        return null;
     }
 }
