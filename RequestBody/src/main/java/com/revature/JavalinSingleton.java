@@ -20,13 +20,20 @@ public class JavalinSingleton {
          */
         app.post("/Song", ctx -> {
                 //implement logic here
-                //retrieve the json string from the request body
-                String jsonString = ctx.body();
 
-                //utilize jackson to convert the json string to a user object
+                String jsonString = ctx.body(); 
+                    //utilize jackson to convert the json string to a user object
                 ObjectMapper om = new ObjectMapper();
-                Song song = om.readValue(jsonString, Song.class);              
-           
+                Song song = om.readValue(jsonString, Song.class);          
+
+                //we need to let the request know we will send back json in the body
+                ctx.contentType("app/json");   
+
+                //utilize jackson convert back the user object to a json string
+                String jsonStringToBeReturned = om.writeValueAsString(song);
+
+                //return the json string in the response body
+                ctx.result(jsonStringToBeReturned);                             
         });
 
         /**
@@ -39,26 +46,10 @@ public class JavalinSingleton {
         app.post("/song", ctx -> {
                 //implement logic here
                 
-                //retrieve the json string from the request body
-                String jsonString = ctx.body();
+    
 
-                //utilize jackson to convert the json string to a user object
-                ObjectMapper om = new ObjectMapper();
-                Song song = om.readValue(jsonString, Song.class);
-
-                //we need to let the request know we will send back json in the body
-                ctx.contentType("App/json"); 
-
-                //change the last name
-                Song.artistName("Beatles");
             
-               //utilize jackson convert back the user object to a json string
-               String jsonStringToBeReturned = ObjectMapper.writeValueAsString(song);
-
-                //return the json string in the response body
-                ctx.result(jsonStringToBeReturned);    
-            });
-
+        });
 
         return app;
     }
