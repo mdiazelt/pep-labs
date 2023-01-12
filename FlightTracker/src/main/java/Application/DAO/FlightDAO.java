@@ -115,8 +115,8 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //write preparedStatement's setString and setInt methods here.
-            preparedStatement.setString(1, sql);
-            preparedStatement.setString(2, sql);
+            preparedStatement.setString(1, flight.departure_city);
+            preparedStatement.setString(2, flight.arrival_city);
 
             preparedStatement.executeUpdate();
             ResultSet pkeyResultSet = preparedStatement.getGeneratedKeys();
@@ -155,8 +155,8 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
-            preparedStatement.setString(1, sql);
-            preparedStatement.setString(2, sql);
+            preparedStatement.setString(1, flight.departure_city);
+            preparedStatement.setString(2, flight.arrival_city);
             preparedStatement.setInt(3, id);
 
             preparedStatement.executeUpdate();
