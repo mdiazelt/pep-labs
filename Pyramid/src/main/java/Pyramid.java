@@ -31,10 +31,10 @@ public class Pyramid {
         StringBuffer sb = new StringBuffer();
 
         for (int i = 0; i < n; i++) {
-            if (i != 0) {
+            for(int j =0; j <= i; j++){
                 sb.append('*');
-            }
-            sb.append(' ');
+                sb.append(' ');
+            }    
         }
         return sb.toString();
     }
