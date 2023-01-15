@@ -9,10 +9,16 @@ public class ContainsDuplicates {
      * @return true if nums contains any duplicate values, false if it does not.
      */
     public boolean containsDuplicate(int[] nums){
-        return false;
-    }
 
-    private Object nums(int i) {
-        return null;
+        Set<Integer> seen = new HashSet<>();
+
+        for(int i = 0; i < nums.length; i++){
+            if(seen.contains(nums[i])){
+                return true;
+            }else{
+                seen.add(Integer.valueOf(nums[i]));
+            }
+        }
+        return false;
     }
 }
