@@ -29,12 +29,14 @@ public class Pyramid {
     public String returnPyramid(int n){
 
         StringBuffer sb = new StringBuffer();
-
-        for (int i = 0; i < n; i++) {
-            for(int j =0; j <= i; j++){
-                sb.append('*');
-                sb.append(' ');
+        
+        //rows
+        for (int i = 1; i <= n; i++) {
+            //asterisks
+            for(int j = 1; j <= i; j++){
+                sb.append("*");
             }    
+            sb.append(System.lineSeparator());
         }
         return sb.toString();
     }
