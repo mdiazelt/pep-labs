@@ -27,7 +27,7 @@ public class JavalinSingleton {
                 Song song = om.readValue(jsonString, Song.class);
 
                 //we need to let the request know we will send back json in the body
-                ctx.contentType("app/jason"); 
+                ctx.contentType("App/jason"); 
 
                 //utilize jackson convert back the user object to a json string
                 String jsonStringToBeReturned = om.writeValueAsString(song);
