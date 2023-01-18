@@ -17,12 +17,12 @@ public class Fibonacci {
     public int fib(int n){
         int a = 0;
         int b = 0;
-        int c = 0;
-        int res = 0;
 
         if(n <= 1){
             return 1;
         }
-        return 0;
+        else{
+            return;
+       }
     }
 }
