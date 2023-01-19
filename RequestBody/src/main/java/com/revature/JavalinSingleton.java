@@ -18,6 +18,11 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
+        app.get("/Song", ctx -> { 
+            ctx.result("Hello");
+
+        });
+
         app.post("/Song", ctx -> {
                 //implement logic here
                 String jsonString = ctx.body();
