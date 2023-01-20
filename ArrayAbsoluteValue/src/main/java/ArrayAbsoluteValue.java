@@ -12,7 +12,8 @@ public class ArrayAbsoluteValue {
         int[] nums1 = new int[nums.length];
 
         for(int i = 0; i < nums.length; i++){
-           Math.abs(nums[i]);
+            nums1[i] = Math.abs(nums[i]); 
+                       
         }
 
         return nums1; 
