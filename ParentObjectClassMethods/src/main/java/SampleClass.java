@@ -55,14 +55,15 @@ public class SampleClass {
     public int a;
     public boolean b;
 
-    //    implement a custom .equals(SampleClass other){} method here.
+//    implement a custom .equals(SampleClass other){} method here.
     public boolean equals(SampleClass other){
-            return false;
-         }
+        //code here
+        return false;
+     }
 
-    //    implement a custom .toString(){} method here.
-    public String customToString(){
+
+//    implement a custom .toString(){} method here.
+    public String toString(){
         return null;
     }
-    
 }
