@@ -15,6 +15,6 @@ public class LargestSum {
 
         Collections.sort(nums);
         
-        return ;
+        return nums;
     }
 }
