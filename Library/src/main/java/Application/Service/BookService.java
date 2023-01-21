@@ -51,14 +51,16 @@ public class BookService {
      * key was already in use.)
      */
     public Book addBook(Book book) {
-        return null;
+        return ;
     }
     /**
      * TODO: Use the bookDAO to retrieve a list of all books that have a bookCount above 0.
      * @return all available books (bookCount over zero)
      */
     public List<Book> getAllAvailableBooks() {
-        return null;
+        if(bookDAO.getAllAvailableBooks > 0){
+        return copies_available;
+        }
     }
 
 }

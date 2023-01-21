@@ -90,10 +90,12 @@ public class BookDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me" ;
+            String sql = "INSERT INTO Book(book) VALUES(?) ";//"change me" ;
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setString and setInt methods here.
+            preparedStatement.setInt(1, book.getIsbn());
+            preparedStatement.setString(2, book.getTitle());
 
             preparedStatement.executeUpdate();
             return book;
@@ -112,7 +114,7 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "";//"change me";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
