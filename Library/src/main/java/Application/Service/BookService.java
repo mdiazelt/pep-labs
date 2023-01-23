@@ -64,7 +64,7 @@ public class BookService {
      */
     public List<Book> getAllAvailableBooks() {
 
-        if(bookDAO.getAllAvailableBooks > 0){
+        if(BookDAO.getAllAvailableBooks >= 0){
             return copies_available;
         }
     }
