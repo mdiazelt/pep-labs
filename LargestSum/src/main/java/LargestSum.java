@@ -12,9 +12,10 @@ public class LargestSum {
      * @return the largest possible sum of separate numbers from nums.
      */
     public int bigSum(List<Integer> nums){
-
+      
         Collections.sort(nums);
-        
-        return nums;
+        int i;
+        return nums[-1-i] + nums[-2-i];
+       
     }
 }
