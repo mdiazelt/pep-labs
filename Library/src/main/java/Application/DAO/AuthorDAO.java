@@ -53,11 +53,11 @@ public class AuthorDAO {
         try {
 //          Write SQL logic here. You should only be inserting with the name column, so that the database may
 //          automatically generate a primary key.
-            String sql = "INSERT INTO Author (author_id) VALUES = ? ";//"change me" ;
+            String sql = "INSERT INTO Author (name) VALUES = ? ";//"change me" ;
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //write preparedStatement's setString method here.
-            preparedStatement.setString(1, Author.getName());
+            preparedStatement.setString(1, author.setName(name));
 
             preparedStatement.executeUpdate();
             ResultSet pkeyResultSet = preparedStatement.getGeneratedKeys();
