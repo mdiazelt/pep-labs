@@ -57,13 +57,13 @@ public class SampleClass {
 
 //    implement a custom .equals(SampleClass other){} method here.
     public boolean equals(SampleClass other){
-        //code here
-        return false;
+        return (this == other);
      }
 
 
 //    implement a custom .toString(){} method here.
-    public String toString(){
-        return null;
+    public String toString() {
+        return a + " " + b;
+         
     }
 }
