@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Isogram {
     /**
@@ -13,6 +14,17 @@ public class Isogram {
      * @return true if str is an isogram, false otherwise.
      */
     public boolean isIsogram(String str){
-        return false;
+        //str to lowercase
+        str = str.toLowerCase();
+        //conver the string into a sequence of characters
+        char[] arr = str.toCharArray();
+
+        Arrays.sort(arr);
+        for(int i = 0; i < arr.length - 1; i++){
+            if(arr[i] == arr[i + 1]){
+                return false;
+            }
+         }
+        return true;
     }
 }
