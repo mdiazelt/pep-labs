@@ -14,7 +14,7 @@ public class Isogram {
      * @return true if str is an isogram, false otherwise.
      */
     public boolean isIsogram(String str){
-        //str to lowercase
+        //lowercase
         str = str.toLowerCase();
         //conver the string into a sequence of characters
         char[] arr = str.toCharArray();
