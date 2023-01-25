@@ -64,12 +64,9 @@ public class BookService {
      */
     public List<Book> getAllAvailableBooks() {
 
-        Book bookCount = bookDAO.getBooksWithBookCountOverZero();
+        return bookDAO.getBooksWithBookCountOverZero();
 
-        if(bookCount != null){
-            bookDAO.getCopies_available();
-            return copies_available;
-        }
+    
     }
 
 }

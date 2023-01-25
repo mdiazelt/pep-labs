@@ -120,7 +120,7 @@ public class BookDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
-            preparedStatement.setInt(1, getCopies_available());
+            preparedStatement.setInt(1, ISBN);
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
