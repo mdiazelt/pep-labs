@@ -1,7 +1,6 @@
 
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 public class LargestSum {
@@ -15,7 +14,10 @@ public class LargestSum {
     public int bigSum(List<Integer> nums){
         
         Collections.sort(nums);
-       
-            return ;    
+        int sum = 0;
+        for(int i = nums.size()-1; i >= nums.size()-2;i-- ){
+            sum += nums[i];
+        }
+        return sum;    
     }
 }
