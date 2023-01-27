@@ -13,8 +13,6 @@ public class LargestSum {
      */
     public int bigSum(List<Integer> nums){
 
-       
-        Collections.sort(nums);
         
         return 0;  
     }
