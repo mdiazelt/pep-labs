@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.*;
 
 public class MostCommonCharacter {
     /**
@@ -10,18 +10,7 @@ public class MostCommonCharacter {
      */
     public char recurringChar(String str) {
 
-       
-        
-        //int ascii = ch;
-        int[] ascii_count = new int[128];  
-        HashMap<Character,Integer> count = new HashMap<Character,Integer>();
-
-        for(int i = 0; i < str.length(); i++){
-            char ch = str.charAt(i);
-            if (ch < 128) {
-                ascii_count[ch]++;
-            }
-        }
-        return "";
+    return 0;
     }
+    
 }
