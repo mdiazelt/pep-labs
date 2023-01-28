@@ -1,5 +1,7 @@
 
 import java.util.List;
+import java.util.stream.Stream;
+import java.util.Arrays;
 import java.util.Collections;
 
 
@@ -12,12 +14,13 @@ public class LargestSum {
      * @return the largest possible sum of separate numbers from nums.
      */
     public int bigSum(List<Integer> nums){
-        Collections.sort(nums);
-        System.out.println(nums);
-        int sum = 0;
-        for (int i = 0; i <= nums.size(); i--){
-            sum = nums.get(-1 ) + nums.get(2);
-        }
+        
+        int sum = nums
+                .stream()
+                .sorted()
+                .skip(nums.size() - 2)
+                .reduce(0,  Integer::sum);
+       
         return sum;  
     }
 
