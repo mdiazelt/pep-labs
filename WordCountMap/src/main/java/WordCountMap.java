@@ -24,7 +24,7 @@ public class WordCountMap {
             Integer integer = hMap.get(word);
 
             if (integer == null){
-                hMap.put(word, 1);;
+                hMap.put(word, 1);
             }else{
                 hMap.put(word, integer + 1);
             }
